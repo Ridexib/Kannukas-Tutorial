@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="et">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Kännuka meeskonna rollid ja tööjuhised">
+  <title>Meeskonna õpetus | Kännukas</title>
+  <style>
+    :root { color-scheme: dark; --bg:#0d1117; --card:#151b23; --line:#30363d; --text:#e6edf3; --muted:#aab4c0; --orange:#f4a11b; --green:#55c96c; --blue:#65c7e8; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--bg); color:var(--text); font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif; }
+    a { color:var(--blue); }
+    .wrap { width:min(1100px,calc(100% - 36px)); margin:auto; }
+    header { border-bottom:1px solid var(--line); background:#10151d; }
+    .top { display:flex; justify-content:space-between; align-items:center; gap:16px; padding:17px 0; }
+    .brand { color:var(--orange); font-size:20px; font-weight:800; text-decoration:none; letter-spacing:.02em; }
+    .top nav { display:flex; gap:18px; flex-wrap:wrap; }
+    .top nav a { color:var(--muted); text-decoration:none; }
+    .top nav a:hover { color:var(--text); }
+    .hero { padding:54px 0 34px; }
+    .eyebrow { color:var(--orange); text-transform:uppercase; font-size:12px; font-weight:800; letter-spacing:.16em; }
+    h1 { font-size:clamp(2rem,5vw,3.3rem); line-height:1.12; margin:10px 0 15px; }
+    h2 { font-size:1.6rem; margin:0 0 16px; line-height:1.25; }
+    h3 { font-size:1.12rem; margin:0 0 8px; }
+    p { margin:0 0 13px; }
+    .lead { max-width:730px; color:var(--muted); font-size:1.07rem; }
+    .notice { padding:15px 18px; border:1px solid #654719; border-left:4px solid var(--orange); background:#241c13; border-radius:8px; margin:20px 0 0; }
+    .section { padding:33px 0; border-top:1px solid var(--line); }
+    .pillnav { display:flex; flex-wrap:wrap; gap:9px; margin-top:22px; }
+    .pillnav a { text-decoration:none; color:var(--text); padding:7px 12px; border:1px solid var(--line); background:var(--card); border-radius:999px; font-size:14px; }
+    .pillnav a:hover { border-color:var(--orange); }
+    .path { display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin:12px 0 20px; }
+    .path span { border:1px solid var(--line); border-radius:8px; background:var(--card); padding:8px 12px; font-weight:650; }
+    .path b { color:var(--orange); }
+    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
+    .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:22px; }
+    .card p:last-child, .card ul:last-child { margin-bottom:0; }
+    .role { scroll-margin-top:20px; }
+    .role h3 { color:var(--orange); font-size:1.35rem; }
+    .tag { display:inline-block; border:1px solid #356348; color:var(--green); padding:2px 8px; border-radius:99px; font-size:12px; font-weight:700; margin-bottom:12px; }
+    .tag.branch { border-color:#346175; color:var(--blue); }
+    .muted { color:var(--muted); }
+    ul,ol { padding-left:22px; margin:10px 0 15px; }
+    li { margin:5px 0; }
+    code { background:#30363d; color:#f2f5f7; border-radius:5px; padding:2px 5px; font: .9em Consolas,"Liberation Mono",monospace; }
+    .table-wrap { overflow:auto; border:1px solid var(--line); border-radius:10px; }
+    table { border-collapse:collapse; width:100%; min-width:620px; }
+    th,td { padding:12px 14px; text-align:left; vertical-align:top; border-bottom:1px solid var(--line); }
+    th { background:#1d2732; color:var(--orange); }
+    tr:last-child td { border-bottom:0; }
+    @media(max-width:700px) { .grid { grid-template-columns:1fr; } .top { align-items:flex-start; flex-direction:column; } .hero { padding-top:38px; } }
+  </style>
+</head>
+<body>
+  <header><div class="wrap top"><a class="brand" href="https://ridexib.github.io/Kannukas-Tutorial/opetus">KÄNNUKAS</a><nav aria-label="Põhinavigeerimine"><a href="#rollid">Rollid ja käsud</a><a href="https://ridexib.github.io/Kannukas-Tutorial/opetus">Mängija õpetus ↗</a></nav></div></header>
+  <main class="wrap">
+    <section class="hero">
+      <div class="eyebrow">Meeskonna käsiraamat</div>
+      <h1>Meeskonna õigused ja käsud</h1>
+      <p class="lead">Vaata, millised võimalused sinu rankiga kaasnevad ja mida käsud teevad. Kõrgemad rankid pärivad üldjuhul eelmiste õigused.</p>
+      <div class="pillnav" aria-label="Liigu rollini"><a href="#valvur">Valvur</a><a href="#abistaja">Abistaja</a><a href="#mod">Moderaator</a><a href="#admin">Admin</a><a href="#vadmin">Vanem Admin</a><a href="#juhtadmin">Juht Admin</a><a href="#ehitaja">Ehitaja</a><a href="#vehitaja">VanemEhitaja</a></div>
+    </section>
+
+    <section class="section" id="rollid">
+      <h2>Kuidas rankid päranduvad?</h2>
+      <p class="muted">Kõrgem modereerimisrank pärib madalama rolli õigused ja saab juurde oma tööriistad. Ehitajatel on eraldi rada.</p>
+      <div class="path" aria-label="Modereerimise rankide järjestus"><span>Valvur</span><b>→</b><span>Abistaja</span><b>→</b><span>Moderaator</span><b>→</b><span>Admin</span><b>→</b><span>Vanem Admin</span><b>→</b><span>Juht Admin</span></div>
+      <div class="path" aria-label="Ehitajate rankide järjestus"><span>Ehitaja</span><b>→</b><span>VanemEhitaja</span></div>
+      <div class="grid">
+        <article class="card role" id="valvur"><span class="tag">Modereerimise algus</span><h3>Valvur</h3><ul><li><code>/co i</code> – lülitab CoreProtecti ploki kontrolli sisse või välja; klõps plokil näitab selle ajalugu.</li><li><code>/co l u:&lt;mängija&gt; t:&lt;aeg&gt; r:&lt;raadius&gt;</code> – otsib CoreProtecti logidest tegevusi.</li><li><code>/warn &lt;mängija&gt; &lt;põhjus&gt;</code> – hoiatab mängijat.</li><li><code>/tempmute &lt;mängija&gt; &lt;aeg&gt; &lt;põhjus&gt;</code> – vaigistab mängija määratud ajaks.</li><li><code>/kick &lt;mängija&gt; &lt;põhjus&gt;</code> – eemaldab mängija serverist.</li><li><code>/seen &lt;mängija&gt;</code> – näitab, millal mängija viimati serveris oli.</li><li><code>/info &lt;mängija&gt;</code> – näitab mängija andmeid.</li><li><code>/signspy</code> – näitab siltidele kirjutatud teksti.</li><li><code>/vanish</code> – muudab sind teistele mängijatele nähtamatuks.</li><li><code>/silentchest</code> – avab kirstu ilma avamisanimatsiooni ja helita.</li></ul></article>
+        <article class="card role" id="abistaja"><span class="tag">Lisaks Valvuri õigustele</span><h3>Abistaja</h3><ul><li><code>/tempban &lt;mängija&gt; &lt;aeg&gt; &lt;põhjus&gt;</code> – keelab mängija ligipääsu määratud ajaks.</li><li><code>/tp &lt;mängija&gt;</code> – teleporteerib sind mängija juurde.</li><li><code>/tphere &lt;mängija&gt;</code> – teleporteerib mängija sinu juurde.</li><li><code>/tppos &lt;x&gt; &lt;y&gt; &lt;z&gt;</code> – teleporteerib sind määratud koordinaatidele.</li><li><code>/gm spectator</code> – lülitab pealtvaataja mängurežiimi.</li><li><code>/rg info &lt;regioon&gt;</code> – näitab WorldGuardi regiooni infot.</li></ul></article>
+        <article class="card role" id="mod"><span class="tag">Lisaks Abistaja õigustele</span><h3>Moderaator</h3><ul><li><code>/invsee &lt;mängija&gt;</code> – avab teise mängija inventari vaatamiseks.</li><li><code>/invcheck &lt;mängija&gt;</code> – kontrollib mängija inventari.</li><li><code>/invlist &lt;mängija&gt;</code> – kuvab mängija salvestatud inventariseisud.</li><li><code>/ender &lt;mängija&gt;</code> – avab mängija ender chest'i.</li></ul></article>
+        <article class="card role" id="admin"><span class="tag">Lisaks Moderaatori õigustele</span><h3>Admin</h3><ul><li><code>/ban &lt;mängija&gt; &lt;põhjus&gt;</code> – keelab mängija ligipääsu määramata ajaks.</li><li><code>/co rollback u:&lt;mängija&gt; t:&lt;aeg&gt; r:&lt;raadius&gt;</code> – pöörab valitud muudatused tagasi.</li><li><code>/co restore u:&lt;mängija&gt; t:&lt;aeg&gt; r:&lt;raadius&gt;</code> – taastab tagasi pööratud muudatused.</li><li><code>/setwarp &lt;nimi&gt;</code> – loob või muudab warpi.</li><li><code>/delwarp &lt;nimi&gt;</code> – kustutab warpi.</li></ul></article>
+        <article class="card role" id="vadmin"><span class="tag">Lisaks Admini ja ehitajate õigustele</span><h3>Vanem Admin</h3><ul><li><code>/invload &lt;mängija&gt;</code> – laadib mängija varasema inventariseisu.</li><li><code>//extinguish</code> – kustutab WorldEditiga lähedal oleva tule.</li><li><code>/rg info &lt;regioon&gt;</code> – näitab regiooni andmeid.</li><li><code>/gm creative</code> – lülitab loomingulise mängurežiimi.</li></ul></article>
+        <article class="card role" id="juhtadmin"><span class="tag">Lisaks Vanem Admini õigustele</span><h3>Juht Admin</h3><ul><li><code>/lp listgroups</code> – näitab LuckPermsi gruppe.</li><li><code>/lp user &lt;mängija&gt; info</code> – näitab mängija LuckPermsi infot.</li><li><code>/lp user &lt;mängija&gt; parent add &lt;grupp&gt;</code> – lisab mängijale ranki.</li><li><code>/lp user &lt;mängija&gt; parent remove &lt;grupp&gt;</code> – eemaldab mängijalt ranki.</li></ul></article>
+        <article class="card role" id="ehitaja"><span class="tag branch">Ehitajate rada</span><h3>Ehitaja</h3><ul><li><code>//wand</code> – annab WorldEditi valikukirve.</li><li><code>//pos1</code> ja <code>//pos2</code> – määravad valiku kaks nurka.</li><li><code>/top</code> – viib sind sama X/Z juures kõrgeimale vabale kohale.</li><li><code>//thru</code> – liigub läbi sihitava seina.</li></ul></article>
+        <article class="card role" id="vehitaja"><span class="tag branch">Lisaks Ehitaja õigustele</span><h3>VanemEhitaja</h3><ul><li><code>/tp &lt;mängija&gt;</code> – teleporteerib sind mängija juurde.</li><li><code>/tphere &lt;mängija&gt;</code> – teleporteerib mängija sinu juurde.</li><li><code>/tppos &lt;x&gt; &lt;y&gt; &lt;z&gt;</code> – teleporteerib sind määratud koordinaatidele.</li><li><code>/god</code> – lülitab kahjustuse eest kaitse sisse või välja.</li></ul></article>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>
+
